@@ -19,3 +19,7 @@ pip install -r requirements.txt
 
 逆にインストールされたパッケージをファイルに残すコマンド
 pip freeze > requirements.txt
+
+ローカルブランチをGitHubにプッシュするコマンド
+なんかなかなかgithubにファイルがアップロードされないなってなったら使ってみてほしい
+git push origin main
