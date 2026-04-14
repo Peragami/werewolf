@@ -3,3 +3,15 @@ git pull origin main --rebase
 
 リモートの最新版を自分に取り込んで、履歴をきれいに整える。
 git pull --rebase
+
+pythonの仮想環境を構築する方法
+
+まずvscodeで"shift+ctrl+p"で左端が「>」の検索窓が出ます
+そこでpythonって打つと「インタプリターを選択」が出てきます
+そしたら仮想環境の作成押して
+pythonのバージョンを3.12.10に合わせてください
+
+
+
+pythonの仮想環境を起動するコマンド
+.venv\Scripts\Activate.ps1 
