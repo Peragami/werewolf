@@ -1,15 +1,23 @@
 from fastapi import FastAPI, Request, Response, Form
 from fastapi.responses import HTMLResponse, RedirectResponse
+from fastapi.staticfiles import StaticFiles
 import urllib.parse
 
 app = FastAPI()
+
+# ← app定義のあとに書く
+app.mount("/static", StaticFiles(directory="static"), name="static")
+
 
 # プレイヤー名を入力するフォームを表示
 @app.get("/", response_class=HTMLResponse)
 def read_root():
     return """
     <html>
-        <head><title>ゲーム登録</title></head>
+        <head>
+            <title>ゲーム登録</title>
+            <link rel="stylesheet" href="/static/style.css">
+        </head>
         <body>
             <h1>プレイヤー名を入力してください</h1>
             <form action="/setname" method="post">
@@ -20,7 +28,7 @@ def read_root():
     </html>
     """
 
-# フォーム送信を受け取り、Cookieに保存 → ゲーム画面へ
+# フォーム送信 → Cookie保存 → リダイレクト
 @app.post("/setname")
 def set_player_name(player_name: str = Form(...)):
     encoded_name = urllib.parse.quote(player_name)
@@ -45,7 +53,10 @@ def game_page(request: Request):
 
     return f"""
     <html>
-        <head><title>ゲーム画面</title></head>
+        <head>
+            <title>ゲーム画面</title>
+            <link rel="stylesheet" href="/static/style.css">
+        </head>
         <body>
             <h1>ようこそ、{player_name} さん！</h1>
             <p>名前変更実装完了</p>
