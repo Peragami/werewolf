@@ -11,7 +11,11 @@ pythonの仮想環境を構築する方法
 そしたら仮想環境の作成押して
 pythonのバージョンを3.12.10に合わせてください
 
-
-
 pythonの仮想環境を起動するコマンド
 .venv\Scripts\Activate.ps1 
+
+パッケージをrequirements.txtから一括インストールするコマンド※仮想環境を立ち上げてから使ってください
+pip install -r requirements.txt
+
+逆にインストールされたパッケージをファイルに残すコマンド
+pip freeze > requirements.txt
