@@ -16,7 +16,7 @@ class ScoreRequest(BaseModel):
     score: int
 
 
-app = FastAPI(title="Werewolf Mixed App", version="1.0.0")
+app = FastAPI(title="Werewolf App", version="1.0.0")
 
 BASE_DIR = Path(__file__).resolve().parent
 STATIC_DIR = BASE_DIR / "static"
