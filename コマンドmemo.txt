@@ -23,3 +23,8 @@ pip freeze > requirements.txt
 ローカルブランチをGitHubにプッシュするコマンド
 なんかなかなかgithubにファイルがアップロードされないなってなったら使ってみてほしい
 git push origin main
+
+gitのメアドと名前入れるコマンド""の中編集してターミナルに張って
+
+git config --global user.email "新しいメールアドレス"
+git config --global user.name "新しいユーザー名"
