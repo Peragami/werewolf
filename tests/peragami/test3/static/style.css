@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: #71117e;
+    color: #ffffff;
+    font-family: sans-serif;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 24px;
+    text-align: center;
+}
+
+h1 {
+    color: #ffcc00;
+}
+
+.name-form {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+input,
+button {
+    font-size: 16px;
+    padding: 10px 14px;
+}
+
+canvas {
+    border: 1px solid #cccccc;
+    background: #ffffff;
+    margin: 12px auto;
+    display: block;
+}
+
+.link {
+    color: #9ad1ff;
+}
